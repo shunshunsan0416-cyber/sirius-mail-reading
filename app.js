@@ -4,11 +4,24 @@ const miniSubmitButton = document.querySelector('#mini-submit-button');
 const miniSuccess = document.querySelector('#mini-success-message');
 const openChatLink = document.querySelector('#openchat-link');
 const openChatHelp = document.querySelector('#openchat-help');
+const footerOpenChatLink = document.querySelector('#footer-openchat-link');
+const personalExpressLink = document.querySelector('#personal-express-link');
+const pairExpressLink = document.querySelector('#pair-express-link');
+
+if (window.SIRIUS_PERSONAL_EXPRESS_URL) {
+  personalExpressLink.href = window.SIRIUS_PERSONAL_EXPRESS_URL;
+}
+if (window.SIRIUS_PAIR_EXPRESS_URL) {
+  pairExpressLink.href = window.SIRIUS_PAIR_EXPRESS_URL;
+}
 
 if (window.SIRIUS_OPENCHAT_URL) {
   openChatLink.href = window.SIRIUS_OPENCHAT_URL;
   openChatLink.target = '_blank';
   openChatLink.rel = 'noopener';
+  footerOpenChatLink.href = window.SIRIUS_OPENCHAT_URL;
+  footerOpenChatLink.target = '_blank';
+  footerOpenChatLink.rel = 'noopener';
 } else {
   openChatLink.addEventListener('click', (event) => {
     event.preventDefault();

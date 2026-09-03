@@ -1,0 +1,49 @@
+.express-title {
+  margin-top: 33px;
+}
+
+.express-menu {
+  position: relative;
+  overflow: hidden;
+  border-color: #d7b47a;
+  background: linear-gradient(142deg, #fff9e9, #f6e0b8);
+}
+
+.express-menu::after {
+  position: absolute;
+  right: -33px;
+  bottom: -54px;
+  color: #bb7b55;
+  content: "✦";
+  font: 150px Georgia, serif;
+  opacity: 0.16;
+}
+
+.express-menu > div,
+.express-menu > a {
+  position: relative;
+  z-index: 1;
+}
+
+.express-menu .menu-tag {
+  color: #9e6c27;
+}
+
+.express-menu h3 {
+  color: #573d32;
+}
+
+.express-menu p {
+  color: #6b594f;
+}
+
+.express-menu a {
+  color: #86522d;
+}
+
+.express-note {
+  margin: 12px 3px 0;
+  color: #8f735f;
+  font-size: 11px;
+  line-height: 1.7;
+}
