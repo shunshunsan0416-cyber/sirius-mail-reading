@@ -8,6 +8,34 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="payments.css">
     <link rel="stylesheet" href="lp.css">
+    <link rel="stylesheet" href="express.css">
+    <style>
+      /* ヒーローは「文字を読む場所」と「もちおを見る場所」を分ける */
+      .sirius-lp { width: 100%; }
+      .s-hero { min-height: 800px; }
+      .s-hero-copy { max-width: 560px; padding-bottom: 0; }
+      .s-brand, .s-hero-copy { z-index: 2; }
+      .s-hero h1 { font-size: 42px; text-shadow: 0 2px 12px #24172999; }
+      .hero-mochio {
+        z-index: 0;
+        right: 50%;
+        bottom: -30px;
+        width: 310px;
+        height: 370px;
+        transform: translateX(50%);
+        object-position: center 35%;
+        border: 1px solid #ffe8d185;
+        border-radius: 170px 170px 0 0;
+        box-shadow: 0 -8px 50px #ffc99363;
+        opacity: .96;
+      }
+      @media (max-width: 390px) {
+        .s-hero { min-height: 720px; padding-right: 20px; padding-left: 20px; }
+        .s-hero-copy { max-width: 100%; }
+        .s-hero h1 { font-size: 34px; letter-spacing: -.04em; }
+        .hero-mochio { width: 282px; height: 335px; bottom: -22px; }
+      }
+    </style>
   </head>
   <body>
     <main class="sirius-lp">
@@ -66,6 +94,12 @@
           <article class="menu-card primary-menu"><div><span class="menu-tag">PERSONAL</span><h3>個人鑑定</h3><p>1年後の景色と、これから訪れる転換点を見ながら、今のあなたに必要なことをお伝えします。</p><strong>5,000円</strong></div><a href="https://siriusu-dog.stores.jp/items/69ce69dc956c0cfb5985e575">この鑑定を詳しく見る →</a></article>
           <article class="menu-card"><div><span class="menu-tag">PAIR</span><h3>ペア鑑定</h3><p>ふたりの関係に見えている景色を読み、これからの関わり方をひもときます。</p><strong>12,000円</strong></div><a href="https://siriusu-dog.stores.jp/items/69ce6d43d9c15715f2159f51">この鑑定を詳しく見る →</a></article>
         </div>
+        <p class="menu-group-title express-title">優先して受け取りたい方へ</p>
+        <div class="reading-menu express-menu-grid">
+          <article class="menu-card express-menu"><div><span class="menu-tag">EXPRESS · PERSONAL</span><h3>個人鑑定｜特急便</h3><p>通常便が受付停止中のときや、優先して鑑定結果を受け取りたい方へ。個人鑑定の内容そのままで、特急枠として承ります。</p><strong>8,000円</strong></div><a id="personal-express-link" href="https://siriusu-dog.stores.jp/">特急便を申し込む →</a></article>
+          <article class="menu-card express-menu"><div><span class="menu-tag">EXPRESS · PAIR</span><h3>ペア鑑定｜特急便</h3><p>お相手との未来や関係性を、優先枠で丁寧に読み解きます。ペア鑑定の内容は通常便と同じです。</p><strong>15,000円</strong></div><a id="pair-express-link" href="https://siriusu-dog.stores.jp/">特急便を申し込む →</a></article>
+        </div>
+        <p class="express-note">※特急便のご依頼が重なった場合は、ご購入順に対応します。通常より優先してお届けします。</p>
         <p class="menu-group-title deep-title">もっと深く視てもらいたい方へ</p>
         <article class="menu-card deep-menu"><div><span class="menu-tag">OPTION</span><h3>深掘り鑑定</h3><p>一度見えた未来をさらに深く。特に気になるテーマを掘り下げてお伝えします。</p><strong>7,000円</strong></div><a href="https://siriusu-dog.stores.jp/items/6a312053589ed62f8fc107a6">この鑑定を詳しく見る →</a></article>
         <a class="shop-link" href="https://siriusu-dog.stores.jp/">🐾 シリウスのショップを見る →</a>
