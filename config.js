@@ -6,4 +6,4 @@ window.SIRIUS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbx-jjDtPT
 window.SIRIUS_STORES_URL = "https://siriusu-dog.stores.jp/items/69ce69dc956c0cfb5985e575";
 
 // LINEオープンチャットの招待URLを貼り付けると、オプチャのミニ鑑定導線が有効になります。
-window.SIRIUS_OPENCHAT_URL = "";
+window.SIRIUS_OPENCHAT_URL = "https://line.me/ti/g2/aJ_gz2JlDaXJ505VHW3VTqWjfTfnjnEJHD07Uw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default";
