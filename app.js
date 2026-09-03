@@ -1,39 +1,52 @@
-const form = document.querySelector('#application-form');
-const errorBox = document.querySelector('#form-error');
-const submitButton = document.querySelector('#submit-button');
-const successMessage = document.querySelector('#success-message');
-const paymentLink = document.querySelector('#payment-link');
+const miniForm = document.querySelector('#mini-application-form');
+const miniError = document.querySelector('#mini-form-error');
+const miniSubmitButton = document.querySelector('#mini-submit-button');
+const miniSuccess = document.querySelector('#mini-success-message');
+const openChatLink = document.querySelector('#openchat-link');
+const openChatHelp = document.querySelector('#openchat-help');
 
-form.addEventListener('submit', async (event) => {
+if (window.SIRIUS_OPENCHAT_URL) {
+  openChatLink.href = window.SIRIUS_OPENCHAT_URL;
+  openChatLink.target = '_blank';
+  openChatLink.rel = 'noopener';
+} else {
+  openChatLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    openChatHelp.hidden = false;
+    openChatHelp.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+}
+
+miniForm.addEventListener('submit', async (event) => {
   event.preventDefault();
-  errorBox.hidden = true;
-  if (!form.checkValidity()) {
-    errorBox.textContent = '必須項目を確認してください。';
-    errorBox.hidden = false;
-    form.reportValidity();
+  miniError.hidden = true;
+  if (!miniForm.checkValidity()) {
+    miniError.textContent = '必須項目を確認してください。';
+    miniError.hidden = false;
+    miniForm.reportValidity();
     return;
   }
-  if (!window.SIRIUS_FORM_ENDPOINT || !window.SIRIUS_STORES_URL) {
-    errorBox.textContent = 'フォームの送信先または決済先がまだ設定されていません。しばらくしてからもう一度お試しください。';
-    errorBox.hidden = false;
+  if (!window.SIRIUS_FORM_ENDPOINT) {
+    miniError.textContent = 'フォームの送信先がまだ設定されていません。しばらくしてからもう一度お試しください。';
+    miniError.hidden = false;
     return;
   }
-  const fields = new FormData(form);
+
+  const fields = new FormData(miniForm);
   fields.set('agreed', fields.get('agreed') ? 'yes' : '');
-  submitButton.disabled = true;
-  submitButton.querySelector('span').textContent = '送信しています…';
+  miniSubmitButton.disabled = true;
+  miniSubmitButton.querySelector('span').textContent = '送信しています…';
   try {
     await fetch(window.SIRIUS_FORM_ENDPOINT, {
       method: 'POST', mode: 'no-cors', body: new URLSearchParams(fields),
     });
-    form.hidden = true;
-    paymentLink.href = window.SIRIUS_STORES_URL;
-    successMessage.hidden = false;
-    successMessage.focus();
+    miniForm.hidden = true;
+    miniSuccess.hidden = false;
+    miniSuccess.focus();
   } catch (_) {
-    errorBox.textContent = '送信できませんでした。通信状況をご確認のうえ、もう一度お試しください。';
-    errorBox.hidden = false;
-    submitButton.disabled = false;
-    submitButton.querySelector('span').textContent = 'この内容で申し込む';
+    miniError.textContent = '送信できませんでした。通信状況をご確認のうえ、もう一度お試しください。';
+    miniError.hidden = false;
+    miniSubmitButton.disabled = false;
+    miniSubmitButton.querySelector('span').textContent = 'メールでミニ鑑定を申し込む';
   }
 });
