@@ -63,3 +63,8 @@ miniForm.addEventListener('submit', async (event) => {
     miniSubmitButton.querySelector('span').textContent = 'メールでミニ鑑定を申し込む';
   }
 });
+const pairExpressImage = document.querySelector('img[alt="ペア鑑定 特急便"]');
+
+if (pairExpressImage) {
+  pairExpressImage.src = '%E3%83%98%E3%82%9A%E3%82%A2%E9%91%91%E5%AE%9A_%E7%89%B9%E6%80%A5%E4%BE%BF.png';
+}
