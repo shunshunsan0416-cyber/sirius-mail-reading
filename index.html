@@ -6,7 +6,43 @@
     <meta name="description" content="未来鑑定士シリウス。無料ミニ鑑定と、個人・ペアの特急メール鑑定を受付中です。">
     <title>未来鑑定士シリウス｜未来の景色を見に行くね</title>
     <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="payments.css"><link rel="stylesheet" href="refresh.css">
-    <style>@media (min-width:640px){.hero-copy{max-width:670px}}.express-final{background:linear-gradient(160deg,#ead5ca,#b7746d)}.express-final .section-kicker,.express-final h2,.express-final .menu-intro{color:#fff}.express-final .express-note{color:#fff7ef}</style>
+    <style>@media (min-width:640px){.hero-copy{max-width:670px}}.express-final{background:linear-gradient(160deg,#ead5ca,#b7746d)}.express-final .section-kicker,.express-final h2,.express-final .menu-intro{color:#fff}.express-final .express-note{color:#fff7ef}.standard-menu .normal-card{overflow:hidden;padding:0;border-color:#b99550;background:#0d2335;color:#fff;box-shadow:0 13px 28px #17233424}.standard-menu .normal-card>img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}.standard-menu .normal-body{padding:23px}.standard-menu .normal-card .card-number{color:#e5b660}.standard-menu .normal-card h3{margin:8px 0 10px;color:#fff;font-size:25px}.standard-menu .normal-card>div>p:not(.card-number){color:#e7dee0;font-size:13px;line-height:1.8}.standard-menu .normal-card strong{color:#f7c662}.standard-menu .normal-card a{position:static;display:block;margin-top:19px;padding:13px;border-radius:999px;background:linear-gradient(90deg,#f7c866,#de9623);color:#152333;font-size:13px;font-weight:800;text-align:center}.standard-menu .normal-card.pair-card>img{object-position:center 40%;filter:saturate(1.04) brightness(.9)}</style>
+    <style>
+      /* ヒーローのもちおは、写真ではなくプロフィールアイコンとして配置 */
+      .hero-photo {
+        right: 50%;
+        bottom: 40px;
+        width: 176px;
+        height: 176px;
+        border: 2px solid #ffe6cfaa;
+        border-radius: 50%;
+        box-shadow: 0 0 0 7px #ffffff12, 0 10px 35px #ffba7b70;
+        transform: translateX(50%);
+      }
+      .hero-photo img { object-position: center 34%; }
+      @media (min-width: 640px) {
+        .hero-photo { right: 54px; bottom: 52px; width: 205px; height: 205px; transform: none; }
+      }
+    </style>
+    <style>
+      /* PCではLP全体を画面幅いっぱいに使う */
+      @media (min-width: 900px) {
+        .sirius-page { width: 100%; max-width: none; }
+        .new-hero,
+        .opening-section,
+        .new-menu,
+        .promise-section,
+        .new-mini,
+        .new-flow,
+        .faq-section,
+        .new-mail-form,
+        .closing-section { padding-right: clamp(64px, 10vw, 180px); padding-left: clamp(64px, 10vw, 180px); }
+        .new-hero { min-height: 720px; }
+        .hero-photo { right: clamp(80px, 14vw, 280px); bottom: 70px; width: 230px; height: 230px; }
+        .opening-section > p:not(.section-kicker),
+        .promise-section > p:not(.section-kicker) { max-width: 720px; }
+      }
+    </style>
   </head>
   <body>
     <main class="sirius-page">
@@ -29,9 +65,9 @@
 
       <section class="promise-section" aria-labelledby="promise-title"><p class="section-kicker">A GENTLE READING</p><h2 id="promise-title">未来を、<br>怖くしない鑑定。</h2><p>答えを押しつけず、あなたが納得して一歩を選べることを大切にしています。</p><div class="promise-list"><article><b>01</b><h3>寄り添う</h3><p>一人ひとりの背景と気持ちを、置き去りにしません。</p></article><article><b>02</b><h3>ことばにする</h3><p>まだ輪郭のない不安を、受け取りやすいことばに整えます。</p></article><article><b>03</b><h3>選ぶ力を戻す</h3><p>最後に決めるのはあなた。鑑定はそのための灯りです。</p></article></div></section>
 
-      <section id="menu" class="menu-section new-menu" aria-labelledby="menu-title"><p class="section-kicker">READING MENU</p><h2 id="menu-title">じっくり視てもらいたい方へ。</h2><p class="menu-intro">通常の鑑定メニューはこちらです。</p><div class="standard-menu"><div><p class="card-number">STANDARD</p><h3>個人鑑定</h3><p>あなたの未来の流れをじっくり読みます。</p><strong>5,000円</strong></div><div><p class="card-number">STANDARD</p><h3>ペア鑑定</h3><p>ふたりの未来と関係性を読み解きます。</p><strong>12,000円</strong></div><div><p class="card-number">OPTION</p><h3>深掘り鑑定</h3><p>特に気になるテーマを、さらに深く。</p><strong>7,000円</strong><a href="https://siriusu-dog.stores.jp/items/6a312053589ed62f8fc107a6">詳しく見る →</a></div></div><a class="shop-link new-shop-link" href="https://siriusu-dog.stores.jp/">すべての鑑定メニューを見る →</a></section>
+      <section id="menu" class="menu-section new-menu" aria-labelledby="menu-title"><p class="section-kicker">READING MENU</p><h2 id="menu-title">じっくり視てもらいたい方へ。</h2><p class="menu-intro">通常の鑑定メニューはこちらです。</p><div class="standard-menu"><article class="normal-card"><img src="personal-reading.jpeg" alt="個人鑑定"><div class="normal-body"><p class="card-number">STANDARD PERSONAL</p><h3>個人鑑定</h3><p>あなたの未来の流れをじっくり読みます。</p><strong>5,000円</strong><a href="https://siriusu-dog.stores.jp/items/69ce69dc956c0cfb5985e575">この鑑定を詳しく見る　→</a></div></article><article class="normal-card pair-card"><img src="pair-reading.jpeg" alt="ペア鑑定"><div class="normal-body"><p class="card-number">STANDARD PAIR</p><h3>ペア鑑定</h3><p>ふたりの未来と関係性を読み解きます。</p><strong>12,000円</strong><a href="https://siriusu-dog.stores.jp/items/69ce6d43d9c15715f2159f51">この鑑定を詳しく見る　→</a></div></article><article class="normal-card deep-card"><img src="deep-reading.png" alt="深掘り鑑定"><div class="normal-body"><p class="card-number">OPTION</p><h3>深掘り鑑定</h3><p>特に気になるテーマを、さらに深く。</p><strong>7,000円</strong><a href="https://siriusu-dog.stores.jp/items/6a312053589ed62f8fc107a6">この鑑定を詳しく見る　→</a></div></article></div><a class="shop-link new-shop-link" href="https://siriusu-dog.stores.jp/">すべての鑑定メニューを見る →</a></section>
 
-      <section id="express" class="menu-section new-menu express-final" aria-labelledby="express-title"><p class="section-kicker">EXPRESS READING</p><h2 id="express-title">急いで景色を知りたい方へ。<br>特急便を用意しました。</h2><p class="menu-intro">通常便の受付を待たずに、優先枠で受け取りたい方へ。</p><div class="express-grid"><article class="express-card"><img src="個人鑑定_特急便.png" alt="個人鑑定 特急便"><div class="express-content"><p class="card-number">01 · EXPRESS PERSONAL</p><h3>個人鑑定<br>特急便</h3><p>1年後の景色、転換点、今のあなたに必要なことを、優先枠で丁寧にお届けします。</p><strong>8,000円</strong><a id="personal-express-link" href="https://siriusu-dog.stores.jp/items/6a98f7d96754880b2df9c7b2">STORESで申し込む <span>→</span></a></div></article><article class="express-card"><img src="ペア鑑定_特急便.png" alt="ペア鑑定 特急便"><div class="express-content"><p class="card-number">02 · EXPRESS PAIR</p><h3>ペア鑑定<br>特急便</h3><p>お相手とのこれからや、ふたりの関係に見えている景色を、優先して読み解きます。</p><strong>8,000円</strong><a id="pair-express-link" href="https://siriusu-dog.stores.jp/items/6a98f9659797c71265bd40c5">STORESで申し込む <span>→</span></a></div></article></div><p class="express-note">※特急便のご依頼が重なった場合は、ご購入順に対応します。お届けの目安は各STORES商品ページをご確認ください。</p></section>
+      <section id="express" class="menu-section new-menu express-final" aria-labelledby="express-title"><p class="section-kicker">EXPRESS READING</p><h2 id="express-title">急いで景色を知りたい方へ。<br>特急便を用意しました。</h2><p class="menu-intro">通常便の受付を待たずに、優先枠で受け取りたい方へ。</p><div class="express-grid"><article class="express-card"><img src="personal-express.jpg" alt="個人鑑定 特急便"><div class="express-content"><p class="card-number">01 · EXPRESS PERSONAL</p><h3>個人鑑定<br>特急便</h3><p>1年後の景色、転換点、今のあなたに必要なことを、優先枠で丁寧にお届けします。</p><strong>8,000円</strong><a id="personal-express-link" href="https://siriusu-dog.stores.jp/items/6a98f7d96754880b2df9c7b2">STORESで申し込む <span>→</span></a></div></article><article class="express-card"><img src="ペア鑑定_特急便.png" alt="ペア鑑定 特急便"><div class="express-content"><p class="card-number">02 · EXPRESS PAIR</p><h3>ペア鑑定<br>特急便</h3><p>お相手とのこれからや、ふたりの関係に見えている景色を、優先して読み解きます。</p><strong>15,000円</strong><a id="pair-express-link" href="https://siriusu-dog.stores.jp/items/6a98f9659797c71265bd40c5">STORESで申し込む <span>→</span></a></div></article></div><p class="express-note">※特急便のご依頼が重なった場合は、ご購入順に対応します。お届けの目安は各STORES商品ページをご確認ください。</p></section>
 
       <section id="flow" class="flow-section new-flow" aria-labelledby="flow-title"><p class="section-kicker">HOW TO START</p><h2 id="flow-title">鑑定を受け取るまで。</h2><ol><li><b>01</b><div><h3>メニューを選ぶ</h3><p>希望する鑑定を選びます。</p></div></li><li><b>02</b><div><h3>必要事項を送る</h3><p>購入後の案内に沿って、お名前・生年月日・相談内容を送ってね。</p></div></li><li><b>03</b><div><h3>鑑定書を受け取る</h3><p>シリウスが見た景色を、文章で丁寧にお届けします。</p></div></li></ol></section>
 
